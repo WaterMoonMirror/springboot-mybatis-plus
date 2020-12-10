@@ -1,0 +1,12 @@
+spring:
+  profiles:
+    active: dev
+  datasource:
+    # \u9A71\u52A8\u4E0D\u540C mysql 5  com.mysql.jdbc.Driver
+    #         mysql 8  com.mysql.cj.jdbc.Driver\u3001\u9700\u8981\u589E\u52A0\u65F6\u533A\u7684\u914D\u7F6EserverTimezone=GMT%2B8
+    url: jdbc:mysql://192.168.1.130:3306/mybatis_plus?useSSL=false&useUnicode=true&characterEncoding=utf-8&serverTimezone=GMT%2B8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+
+
