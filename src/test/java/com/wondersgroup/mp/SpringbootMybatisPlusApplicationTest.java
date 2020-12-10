@@ -26,4 +26,29 @@ public  class SpringbootMybatisPlusApplicationTest {
         users.forEach(System.out::println);
     }
 
+    @Test
+    public void testInsert(){
+        User user = new User();
+        user.setName("kwhua_mybatis-plus_insertTest");
+        user.setAge(15);
+        user.setEmail("310697723@qq.com");
+        int result = userMapper.insert(user);// 帮我们自动生成id
+        System.out.println(result); // 受影响的行数
+        System.out.println(user); // 看到id会自动填充。
+
+
+    }
+
+    @Test
+    public void testUpdate(){
+        User user = new User();
+        // 通过条件自动拼接动态sql
+        user.setId(1336938968230400001L);
+        user.setName("kwhua_mybatis-plus_updateTest");
+        user.setAge(20);
+        // 注意：updateById 但是参数是一个对象！
+        int i = userMapper.updateById(user);
+        System.out.println(i);
+    }
+
 }
