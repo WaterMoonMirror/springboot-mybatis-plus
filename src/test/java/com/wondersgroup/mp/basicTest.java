@@ -51,4 +51,18 @@ public  class basicTest {
         System.out.println(i);
     }
 
+    // 测试乐观锁成功！
+    @Test
+    public void testOptimisticLocker(){
+        // 1、查询用户信息
+        User user = userMapper.selectById(1L);
+        // 2、修改用户信息
+        user.setName("kwhua");
+        user.setEmail("123456@qq.com");
+        // 3、执行更新操作
+        userMapper.updateById(user);
+    }
+
+
+
 }
