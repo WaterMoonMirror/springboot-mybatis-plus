@@ -16,14 +16,15 @@ public class MyMetaObjectConfiger implements MetaObjectHandler {
     public void insertFill(MetaObject metaObject) {
         log.info("start insert fill.....");
         // setFieldValByName(String fieldName, Object fieldVal, MetaObject metaObject
-        this.setFieldValByName("gmt_create", LocalDateTime.now(),metaObject);
-        this.setFieldValByName("gmt_modified",LocalDateTime.now(),metaObject);
+        // fieldName 为实体字段名
+        this.setFieldValByName("gmtCreate", LocalDateTime.now(),metaObject);
+        this.setFieldValByName("gmtModified",LocalDateTime.now(),metaObject);
     }
 
     // 更新时的填充策略
     @Override
     public void updateFill(MetaObject metaObject) {
         log.info("start update fill.....");
-        this.setFieldValByName("gmt_modified",new Date(),metaObject);
+        this.setFieldValByName("gmtModified",new Date(),metaObject);
     }
 }

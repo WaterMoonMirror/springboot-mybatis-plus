@@ -16,7 +16,7 @@ import java.util.List;
  */
 @SpringBootTest
 @Slf4j
-public  class SpringbootMybatisPlusApplicationTest {
+public  class basicTest {
     @Autowired
     private UserMapper userMapper;
 
