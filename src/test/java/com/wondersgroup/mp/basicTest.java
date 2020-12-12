@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * @author: lizhu@wondesgroup.com
  * @date: 2020/12/10 14:48
- * @description:
+ * @description:  mp 的基础操作
  */
 @SpringBootTest
 @Slf4j

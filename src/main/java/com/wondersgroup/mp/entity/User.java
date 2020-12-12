@@ -24,5 +24,7 @@ public class User {
   @TableField(fill = FieldFill.INSERT_UPDATE)
   private LocalDateTime gmtModified;
 
+  private Integer managerId;
+
 }
 
